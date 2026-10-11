@@ -2,7 +2,7 @@
 
 #include <cstdint>
 
-#if (__GNUC__ <= 7) && !defined _MSC_VER
+#if (__GNUC__ <= 7) && !defined __clang__ && !defined _MSC_VER
 #include <experimental/filesystem>
 namespace filesystem = std::experimental::filesystem;
 #else
